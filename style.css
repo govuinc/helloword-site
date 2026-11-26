@@ -1,0 +1,59 @@
+:root {
+  --bg: #FFF8EC;
+  --surface: #FFFFFF;
+  --text: #2B2A4C;
+  --text2: #55537A;
+  --grape: #5B2BB5;
+  --grape-tint: #F1EBFF;
+  --orange: #9C3600;
+  --teal: #0E6658;
+  --teal-tint: #E2F6F2;
+  --border: #E9DFCB;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15142B;
+    --surface: #22213F;
+    --text: #F4F2FF;
+    --text2: #C3C0E0;
+    --grape: #CDBBFF;
+    --grape-tint: #2A2152;
+    --orange: #FFBB8C;
+    --teal: #7FE3D3;
+    --teal-tint: #0F3634;
+    --border: #34335A;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+header img { width: 72px; height: 72px; border-radius: 18px; flex: none; }
+h1 { margin: 0; font-size: 2rem; line-height: 1.15; font-weight: 900; }
+h1 .hello { color: var(--grape); }
+h1 .word { color: var(--orange); }
+.tagline { margin: 2px 0 0; color: var(--text2); font-weight: 600; }
+nav { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+nav a {
+  padding: 8px 16px; border-radius: 999px; font-weight: 700; text-decoration: none;
+  color: var(--grape); background: var(--surface); border: 2px solid var(--border);
+}
+nav a[aria-current="page"] { background: var(--grape-tint); border-color: var(--grape); }
+section {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
+  padding: 20px 24px; margin-bottom: 18px;
+}
+h2 { margin: 0 0 8px; font-size: 1.25rem; color: var(--grape); font-weight: 800; }
+h3 { margin: 16px 0 4px; font-size: 1.05rem; color: var(--teal); font-weight: 800; }
+p, li { margin: 6px 0; }
+ul { padding-left: 22px; }
+a { color: var(--grape); font-weight: 700; }
+.note { background: var(--teal-tint); border-color: transparent; }
+.updated { color: var(--text2); font-size: 0.95rem; }
+footer { color: var(--text2); font-size: 0.9rem; text-align: center; margin-top: 32px; }
